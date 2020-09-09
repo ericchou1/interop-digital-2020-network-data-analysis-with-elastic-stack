@@ -18,9 +18,9 @@ This repository is the companion information to the talk at [Interop Digital 202
 
 [![Full Video Demo](/images/video_cover.png)](https://youtu.be/m02mVGiZK6o)
 
-## Other Snippets
+## Other Snippets and Configuration
 
-## Cisco IOSv Device Configuration Snippet
+#### Cisco IOSv Device Configuration Snippet
 
 ```
 iosv-1#sh run
@@ -54,7 +54,7 @@ logging host 172.16.1.118 vrf Mgmt-intf transport udp port 5144
 !
 ```
 
-## Cisco NX-OSv Device Configuraiton Snippet 
+#### Cisco NX-OSv Device Configuraiton Snippet 
 
 ```
 nx-osv-1# sh run
@@ -102,7 +102,7 @@ logging source-interface mgmt0
 logging monitor 7
 ```
 
-## Elsticsearch and Kibana Installation
+#### Elsticsearch and Kibana Installation
 
 Elasticsearch and Kibana Installation links can be found on the [Elstic Stack Documentation](https://www.elastic.co/guide/index.html) for the OS you are using. In my example, I am using Ubuntu 18.04 LTS and installed the packages via the Debian packages. 
 
@@ -131,7 +131,7 @@ ens192: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
         inet 172.16.1.118  netmask 255.255.255.0  broadcast 172.16.1.255
         inet6 fe80::20c:29ff:fef4:6d26  prefixlen 64  scopeid 0x20<link>
 ```
-## Data Ingestions - Logstash (and Beats)
+#### Data Ingestions - Logstash (and Beats)
 
 - My Logstash configuration is listed below, notice in the input section of different UDP ports and the corresponded tagging of types. At the output section, there is an if / else statement to put the information in the right index. 
 
